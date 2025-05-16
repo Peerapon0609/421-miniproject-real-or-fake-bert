@@ -13,11 +13,11 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 @st.cache_resource
 def load_model_and_data():
     # 1.1 โหลด state_dict ของโมเดล
-    with open("BERT/bert_fakenews_model_state_dict.pkl", "rb") as f_mod:
+    with open("bert_fakenews_model_state_dict.pkl", "rb") as f_mod:
         state_dict = pickle.load(f_mod)
 
     # 1.2 โหลด tokenizer
-    with open("BERT/bert_fakenews_tokenizer.pkl", "rb") as f_tok:
+    with open("bert_fakenews_tokenizer.pkl", "rb") as f_tok:
         tokenizer = pickle.load(f_tok)
 
     # 1.3 สร้างโมเดลเปล่าและโหลด state_dict
